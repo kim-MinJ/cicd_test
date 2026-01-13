@@ -1,0 +1,100 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #050505;
+  color: #fff;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.game-title {
+  color: #0ff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  font-size: 3em;
+  margin: 0;
+}
+
+.pinball-container {
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pinball-canvas {
+  display: block;
+  border: 4px solid #333;
+  border-radius: 4px;
+  background: #000;
+}
+
+.ui-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 10;
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff00de;
+  text-shadow: 0 0 10px rgba(255, 0, 222, 0.8);
+  text-align: left;
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px 40px;
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  text-align: center;
+  pointer-events: auto;
+}
+
+.game-over h2 {
+  color: #f00;
+  margin-bottom: 20px;
+}
+
+.game-over button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #0ff;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+}
+
+.instructions {
+  color: #888;
+  line-height: 1.6;
+}
